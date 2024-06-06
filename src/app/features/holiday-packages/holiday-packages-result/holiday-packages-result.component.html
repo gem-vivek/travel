@@ -1,0 +1,26 @@
+<div class="holiday-packages">
+<div class="container">
+    <h2  class="holiday-title">Holiday Search Results</h2>
+    <div *ngIf="activites.length === 0">
+      <p class="holiday-title">No Activites found.</p>
+    </div>
+    <div class="row card-deck">
+      <div class="col-12 card" *ngFor="let activite of activites">
+        <div class="row card-body">
+          <div class="col-3">
+        <img [src]="activite.pictures[0]" class="card-img-top" alt="{{ activite.name }}">
+      </div>
+        <div class="col-6 card-details">
+          <h5 class="card-title">{{ activite.name }}</h5>
+          <p class="card-price"> {{ activite.price.amount }} {{activite.price.currencyCode}}</p>
+          <!-- <p class="card-text"></p> -->
+          <p class="card-text">{{ activite.description}} </p>
+          <!-- <p class="card-text"></p> -->
+          <button class="btn btn-primary" (click)="onBookactivite(activite)">Book activite</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

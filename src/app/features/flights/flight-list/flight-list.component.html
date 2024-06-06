@@ -1,0 +1,13 @@
+<div class="flight-list">
+    <mat-card *ngFor="let flight of flights" class="flight-card">
+      <mat-card-header>
+        <mat-card-title>{{ flight.airline }}</mat-card-title>
+        <mat-card-subtitle>{{ flight.departure }} - {{ flight.arrival }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Duration: {{ flight.duration }}</p>
+        <p>Price: {{ flight.price.total }} {{ flight.price.currency }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

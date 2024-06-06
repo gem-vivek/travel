@@ -1,0 +1,57 @@
+.card-text{
+    height: 100px;
+    overflow: auto;
+}
+.holiday-packages{
+    background-color: #224666;
+}
+.card-deck .card{
+    background: white;
+}
+.holiday-title{
+    color: white;
+    font-size: 23px;
+    font-weight: 500;
+}
+.card-img-top{
+    height: 200px;
+}
+.card-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+.card-price{
+    font-size: 18px;
+    font-weight: 500;
+}
+.card-text{
+    font-size: 16px;
+    font-weight: 400;
+}
+.col-12 {
+    flex: 0 0 100%  !important;
+    max-width: 100%;
+}
+.card-details{
+    margin-left: 20%;
+    margin-top: 10px;
+
+}
+// .card-deck{
+//     flex: 1 1 auto;
+//     padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+//     color: var(--bs-card-color);
+//     margin-left: 5%;
+//     background-color: #d1dbdd;
+//     overflow: hidden;
+//     margin-top: 10px;
+//     opacity: 0.9;
+//     width: 90%;
+//     background: #fff;
+//     border-radius: 16px;
+//     height: 100px;
+//     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+//     display: flex;
+//     align-items: center;
+//     padding: 8px 30px;
+// }

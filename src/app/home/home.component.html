@@ -1,0 +1,18 @@
+<div *ngIf="isInside" class="home-container">
+  <div class="navbar">
+    <div class="options">
+      <div class="chNavIcon appendBottom2 chSprite chFlights active option" (click)="navigateTo('flights')">
+        <img src="assets/flight-icon.png" alt="Flights">
+        <p>Flights</p>
+      </div>
+      <div class="option" (click)="navigateTo('holiday-packages')">
+        <img src="assets/holiday-package-icon.png" alt="Holiday Packages">
+        <p>Holiday Packages</p>
+      </div>
+      <div class="option" (click)="navigateTo('hotels')">
+        <img src="assets/hotel-icon.png" alt="Hotels">
+        <p>Hotels</p>
+      </div>
+    </div>
+  </div>
+</div>

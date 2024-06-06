@@ -1,0 +1,34 @@
+<div class="holidays-package">
+<mat-card>
+    <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+      <mat-form-field>
+        <mat-label>Holiday Package</mat-label>
+        <input matInput formControlName="destination" placeholder="Destination" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Start Date</mat-label>
+        <input matInput formControlName="startDate" [matDatepicker]="picker1" placeholder="Start Date">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>End Date</mat-label>
+        <input matInput formControlName="endDate" [matDatepicker]="picker2" placeholder="End Date">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+      <button  class="search-button" type="submit" (click)="searchDestination()">Search</button>
+    </form>
+  </mat-card>
+  <div class="activity-heading">Famous Activites</div>
+  <div class="row container">
+  <div class="col-4 card" *ngFor="let activity of destinations" (click)="selectedActivity(activity)">
+    <img [src]="activity.pictures[0]" class="card-img-top" alt="{{ activity.name }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ activity.name }}</h5>
+      <p class="card-text">{{ activity.description }}</p>
+    </div>
+  </div>
+  </div>
+  <app-holiday-package-list [packages]="packages"></app-holiday-package-list>
+</div>

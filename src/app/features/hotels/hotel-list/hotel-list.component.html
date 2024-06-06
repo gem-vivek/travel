@@ -1,0 +1,13 @@
+<div *ngIf="hotels && hotels.length > 0">
+  <div *ngFor="let hotel of hotels">
+    <mat-card>
+      <mat-card-title>{{ hotel.name }}</mat-card-title>
+      <mat-card-content>
+        {{ hotel.description }}
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<!-- <div *ngIf="!hotels || hotels.length === 0">
+  No hotels found.
+</div> -->

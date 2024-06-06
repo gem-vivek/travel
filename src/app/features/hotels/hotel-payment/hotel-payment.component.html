@@ -1,0 +1,22 @@
+<div *ngIf="bookingDetails" class="hotel-payment card-payment card">
+    <h2>Payment for {{ bookingDetails.hotel.name }}</h2>
+    <p>{{ bookingDetails.offers[0].checkInDate }} - {{ bookingDetails.offers[0].checkOutDate }}</p>
+    <p>Price: {{ bookingDetails.offers[0].price.total }} {{ bookingDetails.offers[0].price.currency }}</p>
+  
+    <form [formGroup]="paymentForm" (submit)="handlePayment($event)">
+          <div class="form-group">
+            <label for="cardName">Cardholder Name</label>
+            <input type="text" id="cardName" formControlName="cardName" class="form-control" required>
+          </div>
+      
+          <div id="card-element" class="form-group">
+          </div>
+      
+          <div id="card-errors" role="alert"></div>
+      
+          <button type="submit" class="btn btn-primary">Pay Now</button>
+        </form>
+    <div id="card-errors" role="alert"></div>
+
+  </div>
+  

@@ -1,0 +1,24 @@
+<div class="login-page">
+  <p class="title">RULE THE WORLD</p>
+<div class="login-container">
+    <h2 class="login-title">Login</h2>
+    <form [formGroup]="loginForm">
+      <div class="row">
+    <div class="col-12">
+      <label for="email">Email:</label>
+      <input class="email-input" type="email" id="email" formControlName="email" placeholder="Enter your email" required>
+    </div>
+    <div class="col-12">
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password" placeholder="Enter your password" required>
+    </div>
+  </div>
+</form>
+    <!-- <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div> -->
+    <button class="login-button" (click)="onLoginClick()">Login</button>
+  </div>
+  <div class="additional-options">
+    <button (click)="toSignup()" >Sign Up</button>
+    <button>Forgot Password?</button>
+  </div>  
+</div>

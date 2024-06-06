@@ -1,0 +1,81 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    background-size: cover;
+  background-position: center;
+    background-image: url('../../assets/travel-img.jpg');
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .option {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .option:hover {
+    transform: translateY(-5px);
+  }
+  
+  .option img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .option p {
+    font-size: 1.5rem;
+  }
+  
+  .navbar {
+    margin-left: 5%;
+    background-color: #d1dbdd;
+    overflow: hidden;
+    /* height: 100px; */
+    margin-top: -100px;
+    opacity: 0.9;
+    width: 90%;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 20px 0 rgb(0 0 0 / 10%);
+    display: flex;
+    align-items: center;
+    padding: 8px 30px;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .navbar ul li {
+    float: left;
+  }
+  
+  .navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  .navbar ul li a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .navbar ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  

@@ -1,0 +1,40 @@
+<div class="flight-page">
+<mat-card>
+    <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+      <mat-form-field>
+        <mat-label>From</mat-label>
+        <input matInput formControlName="from" placeholder="Enter City Code" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>To</mat-label>
+        <input matInput formControlName="to" placeholder="Enter City Code" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Departure Date</mat-label>
+        <input matInput formControlName="departureDate" [min]="today" [matDatepicker]="picker1" placeholder="Departure Date" required>
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Return Date</mat-label>
+        <input matInput formControlName="returnDate" [min]="today" [matDatepicker]="picker2" placeholder="Return Date">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+      <button (click)="searchFlight()" type="submit" class="search-button">Search</button>
+    </form>
+  </mat-card>
+  <h2 class="airport-head">Airports</h2>
+
+  <div class="row container">
+    <div class="col-4 card" *ngFor="let airport of airportsNear">
+      <div class="card-body" (click)="selectedAirport(airport)">
+        <h5 class="card-title">{{ airport.name }}</h5>
+        <h5 class="card-title">CODE : {{ airport.iataCode }}</h5>
+        <p class="card-text">{{ airport.address.cityName }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <app-flight-list [flights]="flights"></app-flight-list>
+</div>

@@ -1,0 +1,45 @@
+<div class="hotel-search-container">
+    <mat-card>
+      <!-- <mat-card-title>Search Hotels</mat-card-title> -->
+      <mat-card-content>
+        <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+          <mat-form-field appearance="fill">
+            <mat-label>Hotel</mat-label>
+            <input matInput formControlName="destination" placeholder="Enter a city or hotel name" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Check-in Date</mat-label>
+            <input matInput [matDatepicker]="checkInPicker" formControlName="checkInDate">
+            <mat-datepicker-toggle matSuffix [for]="checkInPicker"></mat-datepicker-toggle>
+            <mat-datepicker #checkInPicker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Check-out Date</mat-label>
+            <input matInput [matDatepicker]="checkOutPicker" formControlName="checkOutDate">
+            <mat-datepicker-toggle matSuffix [for]="checkOutPicker"></mat-datepicker-toggle>
+            <mat-datepicker #checkOutPicker></mat-datepicker>
+          </mat-form-field>
+          <button  class="search-button" type="submit"  (click)="SearchHotels()">Search</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+    <div class="row container ">
+        <!-- <h2>HOTELS</h2> -->
+        <div class="col-4 card-hotel card" *ngFor="let hotels of hotelDetails">
+    <img src="../../../../assets/hotelss.jpg" class="card-img-top" alt="{{ hotels.data[0].hotel.name }}">
+          <div class="card-body" (click)="selectedHotel(hotels.data[0].hotel.name)">
+            <h5 class="card-name">{{ hotels.data[0].hotel.name }}</h5>
+            <h5 class="card-title"> {{ hotels.data[0].offers[0].price.base }} {{ hotels.data[0].offers[0].price.currency }}</h5>
+            <h5 class="card-title">{{ hotels.data[0].offers[0].room.description.text }}</h5>
+            <h5 class="card-title">Guests - {{ hotels.data[0].offers[0].guests.adults }}</h5>
+            <h5 class="card-title">Check In - {{ hotels.data[0].offers[0].checkInDate }} Check Out - {{ hotels.data[0].offers[0].checkOutDate }}</h5>
+            <!-- <h5 class="card-title">{{ hotels.data[0].offers[0].guest.adult }}</h5> -->
+            <!-- <h5 class="card-title">{{ hotel.iataCode }}</h5> -->
+            <!-- <p class="card-text">{{ hotel.address.cityName }}</p> -->
+          </div>
+        </div>
+      </div>
+      
+    <app-hotel-list [hotels]="hotels"></app-hotel-list>
+  </div>
+  

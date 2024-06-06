@@ -1,0 +1,55 @@
+.container{
+    padding-bottom: 10px;
+}
+.hotel-result{
+    background-color: #073359;
+    width: 100%;
+
+}
+.hotel-text{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 80px;
+}
+
+.card-search{
+    margin-top: 50px;
+    // padding: 8px 55px;
+    /* margin-left: 5%; */
+    background-color: #d1dbdd;
+    overflow: hidden;
+    /* margin-top: -100px; */
+    /* opacity: 0.9; */
+    width: 90%;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 8px 30px;
+}
+.details-card{
+    margin-left: 20%;
+}
+.card-text:last-child {
+    height: 100px;
+    margin-bottom: 0;
+    overflow: auto;
+}
+.card-title{
+    font-size: 16px;
+    font-weight: 400;
+}
+.card-name{
+    font-size: 20px;
+    font-weight: 500
+}
+.hotel-list{
+    margin-top: -40px;
+    margin-left: 85px;
+}
+.col-12 {
+    flex: 0 0 100%  !important;
+    max-width: 100%;
+}

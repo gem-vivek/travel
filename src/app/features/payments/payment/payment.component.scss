@@ -1,0 +1,35 @@
+.container{
+    overflow: hidden;
+    margin-top: 10px;
+    opacity: 0.9;
+    width: 90%;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+    padding: 8px 30px;
+}
+
+.details{
+    // display: flex;
+    // align-items: center
+}
+#card-element {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  #card-errors {
+    color: red;
+  }
+  
+ 
+  .card-payment{
+    margin-top: 50px;
+    padding: 8px 55px;
+    margin-left: 25%;
+    margin-bottom: 50px;
+    width: 50%;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+}

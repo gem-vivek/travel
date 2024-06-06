@@ -1,0 +1,31 @@
+<div class="container card-payment">
+    <h2>Payment for Flight</h2>
+    <div class="details" *ngIf="flight">
+      <p>Airline: {{ flight.validatingAirlineCodes }}</p>
+      <!-- <p>From: {{ searchCriteria.from }}</p>
+      <p>To: {{ searchCriteria.to }}</p> -->
+      <p>Departure: {{ flight.itineraries[0].segments[0].departure.at }}</p>
+      <p>Arrival: {{ flight.itineraries[0].segments[0].arrival.at }}</p>
+      <p>Price: {{ flight.price.total }} {{flight.price.currency}}</p>
+  
+      <div>
+        <h3>Select Payment Method</h3>
+        <form [formGroup]="paymentForm" (submit)="handlePayment($event)">
+          <div class="form-group">
+            <label for="cardName">Cardholder Name</label>
+            <input type="text" id="cardName" formControlName="cardName" class="form-control" required>
+          </div>
+      
+          <div id="card-element" class="form-group">
+          </div>
+      
+          <div id="card-errors" role="alert"></div>
+      
+          <button type="submit" class="btn btn-primary">Pay Now</button>
+        </form>
+      </div>
+  
+      <!-- <button class="btn btn-success" (click)="onPay()">Pay Now</button> -->
+    </div>
+  </div>
+  

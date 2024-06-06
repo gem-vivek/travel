@@ -1,0 +1,25 @@
+<div class="container hotel-result">
+    <h2 class="hotel-text">Hotels Search Results</h2>
+    <div *ngIf="hotelDetailsList?.length === 0">
+      <p class="hotel-text">No Hotels found.</p>
+    </div>
+    <div class="row container hotel-list">
+      <div class="col-12 card-search card" *ngFor="let hotels of hotelDetailsList">
+        <div class="row card-body">
+          <div class="col-3">
+            <img src="../../../../assets/hotelss.jpg" class="card-img-top" alt="{{ hotels.data[0].hotel.name }}">
+          </div>
+            <!-- <div class="card-body" (click)="selectedHotel(hotels.data[0].hotel.name)"> -->
+              <div class="details-card col-6">
+              <h5 class="card-name">{{ hotels.data[0].hotel.name }}</h5>
+              <h5 class="card-title"> {{ hotels.data[0].offers[0].price.base }} {{ hotels.data[0].offers[0].price.currency }}</h5>
+              <h5 class="card-title">{{ hotels.data[0].offers[0].room.description.text }}</h5>
+              <h5 class="card-title">Guests - {{ hotels.data[0].offers[0].guests.adults }}</h5>
+              <h5 class="card-title">Check In - {{ hotels.data[0].offers[0].checkInDate }} Check Out - {{ hotels.data[0].offers[0].checkOutDate }}</h5>
+          <button class="btn btn-primary" (click)="onBookHotel(hotels)">Book Hotel</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

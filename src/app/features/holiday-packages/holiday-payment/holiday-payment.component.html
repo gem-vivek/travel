@@ -1,0 +1,19 @@
+<div class="payment-container">
+    <h2>Payment for {{searchCriteria.activityName}}</h2>
+    <form [formGroup]="paymentForm" (submit)="handlePayment($event)">
+      <div class="form-group">
+        <label for="cardName">Cardholder Name</label>
+        <input type="text" id="cardName" formControlName="cardName" class="form-control" required>
+      </div>
+  
+      <div id="card-element" class="form-group">
+        
+      </div>
+  
+      <div id="card-errors" role="alert"></div>
+  
+      <button type="submit" class="btn btn-primary">Pay Now</button>
+    </form>
+    <div id="card-errors" role="alert"></div>
+  </div>
+  
